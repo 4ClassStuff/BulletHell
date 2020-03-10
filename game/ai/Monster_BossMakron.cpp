@@ -1152,7 +1152,7 @@ rvMonsterBossMakron::Event_AllowMoreSpawns
 */
 // this will allow Makron to spawn more baddies.
 void rvMonsterBossMakron::Event_AllowMoreSpawns( void )	{
-	flagAllowSpawns = true;
+	flagAllowSpawns = false;//was true
 }
 
 /*
@@ -1898,7 +1898,7 @@ stateResult_t rvMonsterBossMakron::State_Torso_CannonAttack ( const stateParms_t
 				PlayAnim ( ANIMCHANNEL_LEGS, "range_cannon_start", parms.blendFrames );
 	
 			}
-			shots = (gameLocal.random.RandomInt ( 8 ) + 4) * combat.aggressiveScale;
+			shots = (gameLocal.random.RandomInt ( 8 ) + 50/*was 4*/) * combat.aggressiveScale;
 			return SRESULT_STAGE ( STAGE_WAITSTART );
 			
 		case STAGE_WAITSTART:
