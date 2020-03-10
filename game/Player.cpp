@@ -2021,7 +2021,7 @@ void idPlayer::Spawn( void ) {
 	if ( !gameLocal.isMultiplayer ) {
 		if ( g_skill.GetInteger() < 2 ) {
 			if ( health < 25 ) {
-				health = 25;
+				health = 1;//was 25
 			}
 		} else {
 			//g_armorProtection.SetFloat( ( g_skill.GetInteger() < 2 ) ? 0.4f : 0.2f );
@@ -11191,7 +11191,7 @@ idPlayer::Event_SetArmor
 =============
 */
 void idPlayer::Event_SetArmor( float newArmor ) {
-	inventory.armor = idMath::ClampInt( 0 , inventory.maxarmor, newArmor );
+	inventory.armor = idMath::ClampInt( 0 , inventory.maxarmor , newArmor );
 }
 
 /*
