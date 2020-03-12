@@ -1152,7 +1152,7 @@ rvMonsterBossMakron::Event_AllowMoreSpawns
 */
 // this will allow Makron to spawn more baddies.
 void rvMonsterBossMakron::Event_AllowMoreSpawns( void )	{
-	flagAllowSpawns = false;//was true
+	flagAllowSpawns = true;
 }
 
 /*
